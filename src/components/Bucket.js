@@ -1,7 +1,8 @@
+// Import React and destructure `useState`
 import React, { useState } from "react";
 import BucketForm from "./BucketForm";
 
-// Pass in props for a bucket
+// Pass in props (values & methods) for a bucket
 function Bucket(props) {
     // Establish a new state variable `edit` default as an object with the properties set to null and empty strings
     const [edit, setEdit] = useState({
@@ -10,9 +11,9 @@ function Bucket(props) {
         eagerness: "",
     });
 
-    console.log(props.bucket);
+    console.log(props);
 
-   // `submitUpdate` takes in a value and then calls an anonymous function to edit the item off of `props` 
+    // `submitUpdate` takes in a value and then calls an anonymous function to edit the item off of `props`
     const submitUpdate = (value) => {
         props.editBucketItem(edit.id, value);
 

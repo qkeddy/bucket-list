@@ -59,7 +59,7 @@ function BucketList() {
 
         // We use the `prev` argument provided with the useState hook (`setBucket`) to map through our list of items
         // Only update items where the `item.id` matches the `itemId` with `newValue`. Otherwise, use the current value.
-        // `prev` argument is a an array of objects
+        // `prev` argument is the current state variable's contents aka bucket aka our current array of bucket list items/objects.
         // We then check to see if the item ID matches the id of the item that was clicked and if so, we set it to a new value
         setBucket((prev) => prev.map((item) => (item.id === itemId ? newValue : item)));
     };

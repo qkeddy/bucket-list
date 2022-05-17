@@ -31,7 +31,7 @@ function Bucket(props) {
         return <BucketForm edit={edit} onSubmit={submitUpdate} />;
     }
 
-    // Returning an HTML object with each item on the bucket list by mapping over each object in the array of objects with their respective values
+    // Returning JSX tags with each item on the bucket list. This is done by mapping over each object in the array of objects with their respective values in curly brackets to evaluate data in the JSX.
     return props.bucket.map((item, index) => (
         // Dynamically set styling class based upon eagerness
         <div className={item.isComplete ? `bucket-row complete ${item.eagerness}` : `bucket-row ${item.eagerness}`} key={index}>

@@ -67,6 +67,7 @@ function BucketForm(props) {
             <form className="bucket-form" onSubmit={handleSubmit}>
                 <input type="text" placeholder={props.edit.value} value={input} name="text" className="bucket-input" onChange={handleChange}></input>
                 <div className="dropdown">
+                    {/* Adding specific class styles depending on if `low`, `medium`, or `high` eagerness is selected. If no eagerness is selected, then default to the string of `Priority` on the button */}
                     <button className={`dropbtn ${eagerness}`}>{eagerness || "Priority"}</button>
                     <div className="dropdown-content">
                         {/* onClick events that will set the corresponding eagerness level from the `eagernessLevel` array */}

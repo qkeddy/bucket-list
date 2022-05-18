@@ -64,7 +64,8 @@ function BucketForm(props) {
         // If the prop "edit" exists, render the update form instead
         <div>
             <h3>Update entry: {props.edit.value}</h3>
-            <form className="bucket-form" onSubmit={handleSubmit}>
+            {/* <form className="bucket-form" onSubmit={handleSubmit}> */}
+            <form className="bucket-form">
                 <input type="text" placeholder={props.edit.value} value={input} name="text" className="bucket-input" onChange={handleChange}></input>
                 <div className="dropdown">
                     {/* Adding specific class styles depending on if `low`, `medium`, or `high` eagerness is selected. If no eagerness is selected, then default to the string of `Priority` on the button */}
@@ -76,7 +77,10 @@ function BucketForm(props) {
                         <p onClick={() => setEagerness(eagernessLevel[2])}>Take it or leave it</p>
                     </div>
                 </div>
-                <button className="bucket-button">Update</button>
+                {/* <button className="bucket-button"> */}
+                <button className="bucket-button" onClick={handleSubmit}>
+                    Update
+                </button>
             </form>
         </div>
     );
